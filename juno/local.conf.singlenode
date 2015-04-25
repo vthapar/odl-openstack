@@ -25,6 +25,8 @@ SERVICE_TOKEN=tokennekot
 
 SCREEN_LOGDIR=$DEST/logs/screen
 LOGFILE=$DEST/logs/stack.sh.log
+#LOG_COLOR=False
+
 
 #FLOATING_RANGE=192.168.57.128/25
 #PUBLIC_NETWORK_GATEWAY=192.168.56.1
@@ -43,18 +45,9 @@ VNCSERVER_LISTEN=0.0.0.0
 disable_service n-net
 disable_service cinder
 disable_service swift
-#disable_service n-cpu
-enable_service n-cpu
-enable_service n-cond
-enable_service q-svc
-enable_service q-dhcp
-enable_service q-l3
-enable_service q-meta
-enable_service tempest
-enable_service odl-compute
 
 #ENABLED_SERVICES+=,neutron,quantum,q-svc,q-meta,odl-compute,n-cpu,q-dhcp,q-l3
-#ENABLED_SERVICES+=,neutron,q-svc,n-novnc,n-cpu,nova,q-meta,odl-compute
+ENABLED_SERVICES+=,neutron,q-svc,n-novnc,n-cpu,nova,q-meta,q-dhcp,q-l3,odl-compute
 #ENABLED_SERVICES=neutron,nova,n-cpu,n-novnc,rabbit
 
 #ODL_PROVIDER_MAPPINGS=physnet1:eth1
