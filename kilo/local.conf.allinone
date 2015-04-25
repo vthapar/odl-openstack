@@ -1,0 +1,75 @@
+[[local|localrc]]
+GIT_BASE=https://github.com
+HOST_IP=192.168.56.101
+HOST_NAME=u14-osc-ctrl
+SERVICE_HOST_NAME=$HOST_NAME
+SERVICE_HOST=$HOST_IP
+#MULTI_HOST=1
+#RECLONE=yes
+#OFFLINE=true
+
+#IMAGE_URLS+="http://launchpad.net/cirros/trunk/0.3.2/+download/cirros-0.3.2-x86_64-uec.tar.gz,http://berrange.fedorapeople.org/images/2012-02-29/f16-x86_64-openstack-sda.qcow2"
+#IMAGE_URLS+="https://cloud-images.ubuntu.com/releases/14.04/release/ubuntu-14.04-server-cloudimg-arm64-disk1.img"
+
+MYSQL_HOST=$SERVICE_HOST
+RABBIT_HOST=$SERVICE_HOST
+GLANCE_HOSTPORT=$SERVICE_HOST:9292
+KEYSTONE_AUTH_HOST=$SERVICE_HOST
+KEYSTONE_SERVICE_HOST=$SERVICE_HOST
+ADMIN_PASSWORD=password
+MYSQL_PASSWORD=$ADMIN_PASSWORD
+RABBIT_PASSWORD=$ADMIN_PASSWORD
+SERVICE_PASSWORD=$ADMIN_PASSWORD
+SERVICE_TOKEN=tokennekot
+
+SCREEN_LOGDIR=$DEST/logs/screen
+LOGFILE=$DEST/logs/stack.sh.log
+#LOG_COLOR=False
+
+#FLOATING_RANGE=192.168.57.128/25
+#PUBLIC_NETWORK_GATEWAY=192.168.56.1
+#FLAT_INTERFACE=eth2
+
+NEUTRON_CREATE_INITIAL_NETWORKS=False
+Q_PLUGIN=ml2
+ENABLE_TENANT_TUNNELS=True
+#Q_ML2_TENANT_NETWORK_TYPE=vxlan
+enable_plugin networking-odl https://github.com/stackforge/networking-odl
+
+VNCSERVER_PROXYCLIENT_ADDRESS=$HOST_IP
+VNCSERVER_LISTEN=0.0.0.0
+
+disable_service n-net
+disable_service cinder
+disable_service swift
+#disable_service n-cpu
+enable_service n-cpu
+enable_service n-cond
+enable_service q-svc
+enable_service q-dhcp
+enable_service q-l3
+enable_service q-meta
+#enable_service quantum
+#enable_service tempest
+#enable_service odl-compute
+
+#ENABLED_SERVICES+=,neutron,quantum,q-svc,q-meta,odl-compute,n-cpu,q-dhcp,q-l3
+#ENABLED_SERVICES+=,neutron,q-svc,n-novnc,n-cpu,nova,q-meta,odl-compute
+#ENABLED_SERVICES=neutron,nova,n-cpu,n-novnc,rabbit
+
+ODL_MODE=externalodl
+#ODL_PROVIDER_MAPPINGS=physnet1:eth1
+
+#ODL_LOCAL_IP=192.168.56.101
+#ODL_MGR_IP=127.0.0.1
+ODL_MGR_IP=192.168.56.1
+
+# Port for rest calls
+ODL_PORT=8080
+
+#Port for OVSDB
+#ODL_MGR_PORT=6640
+
+[[post-config|/etc/neutron/plugins/ml2/ml2_conf.ini]]
+[agent]
+minimize_polling=True
