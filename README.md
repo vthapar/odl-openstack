@@ -50,13 +50,13 @@ For more details refer: https://github.com/stackforge/networking-odl/blob/master
 --------------
 These are the links which provided most of the information you see here:
 
-Ask OpenDaylight: https://ask.opendaylight.org/questions/
-ODL+Openstack wiki: https://wiki.opendaylight.org/view/OpenStack_and_OpenDaylight
-Devstack github: https://github.com/openstack-dev/devstack
-Stackforge for ODL Plugin: https://github.com/stackforge/networking-odl
-Flavio's mail on running networking-odl plugin with ODL: https://lists.opendaylight.org/pipermail/ovsdb-dev/2015-February/001132.html
-Mohnish's mail on enabling Neutron Router API with devstack and ODL: https://lists.opendaylight.org/pipermail/ovsdb-dev/2015-April/001400.html
-Romil's scripts to install ODL+OpenStack from canonical packages: https://github.com/romilgupta/Openstack-ODL-Script
+1. Ask OpenDaylight: https://ask.opendaylight.org/questions/
+2. ODL+Openstack wiki: https://wiki.opendaylight.org/view/OpenStack_and_OpenDaylight
+3. Devstack github: https://github.com/openstack-dev/devstack
+4. Stackforge for ODL Plugin: https://github.com/stackforge/networking-odl
+5. Flavio's mail on running networking-odl plugin with ODL: https://lists.opendaylight.org/pipermail/ovsdb-dev/2015-February/001132.html
+6. Mohnish's mail on enabling Neutron Router API with devstack and ODL: https://lists.opendaylight.org/pipermail/ovsdb-dev/2015-April/001400.html
+7. Romil's scripts to install ODL+OpenStack from canonical packages: https://github.com/romilgupta/Openstack-ODL-Script
 
-Slides from the workshop conducted at ODL India Forum 2015:
+8. Slides from the workshop conducted at ODL India Forum 2015:
 http://events.linuxfoundation.org/sites/events/files/slides/ODL%20and%20OpenStack%20-%20Workshop.pdf
