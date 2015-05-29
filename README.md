@@ -61,4 +61,4 @@ These are the links which provided most of the information you see here:
 8. [Slides from the workshop conducted at ODL India Forum 2015]
 (http://events.linuxfoundation.org/sites/events/files/slides/ODL%20and%20OpenStack%20-%20Workshop.pdf)
 
-9. [Flavio's Blog part1 (link to part2 at end of blog)] http://www.flaviof.com/blog/work/how-to-odl-with-openstack-part1.html
+9. [Flavio's Blog] (http://www.flaviof.com/blog/work/how-to-odl-with-openstack-part1.html)
